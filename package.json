@@ -3,7 +3,7 @@
     "author": "Ulf Kunze",
     "desc": "Hello World test",
     "repository": "https://github.com/FuzzyH/Info-beamer-test",
-    "platforms": [],
+    "platforms": ["pi/zero","pi/zero-2"],
     "offline": {
         "support": "yes",
         "info": "it's a hello world"
