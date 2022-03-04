@@ -1,5 +1,15 @@
 {
     "name": "Hello world",
     "author": "Ulf Kunze",
-    "desc": "A hello world"
+    "desc": "Hello World test",
+    "repository": "https://github.com/FuzzyH/Info-beamer-test",
+    "platforms": [],
+    "offline": {
+        "support": "yes",
+        "info": "it's a hello world"
+    },
+    "nesting": {
+        "parents": "any",
+        "childs": []
+    }
 }
