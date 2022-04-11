@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import os
+import sys
 import time
 import traceback
 from unicodedata import name
@@ -26,13 +27,13 @@ def main():
         try:
             # clean older files
             cleanup()
-
             # get number of dad jokes 
             dadjokes = []
             for i in range(config.count):
                 joke_json = requests.get(headers={'content-type': 'application/json'}, url='https://icanhazdadjoke.com/')
+                print >>sys.stderr, 'caching %s' % joke_json
                 dadjokes.append(joke_json)
-
+                
             # write to file
             node.write_json("dadjokes.json", dadjokes)
         except:
