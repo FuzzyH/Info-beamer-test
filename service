@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import os
 import time
+from tkinter import W
 import traceback
 import requests
 from hosted import config, api, node
@@ -21,7 +22,7 @@ def cleanup(max_age=12*3600):
 
 def main():
     config.restart_on_update()
-    with open(log.log) as log:
+    with open(file='logg.log', mode='a') as log:
         log.write("opened")
         while 1:
             log.write("while")
