@@ -8,6 +8,6 @@
     }],
     "desc": "Hello World test",
     "permissions": {
-        "network": "Needs to fetch Dad Jokes"
+        "network": "Needed to fetch Dad Jokes"
     }
 }
