@@ -42,7 +42,7 @@ def main():
                 node.write_json("dadjokes.json", dadjokes)
                 log.write("saved")
             except:
-                traceback.print_exc(file=log)
+                traceback.print_exc()
                 time.sleep(60)
             else:
                 time.sleep(60 * config.poll_interval)
