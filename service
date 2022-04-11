@@ -21,23 +21,23 @@ def cleanup(max_age=12*3600):
 
 def main():
     config.restart_on_update()
+    with open(log.log) as log:
+        while 1:
+            try:
+                cleanup()
+                # get number of dad jokes 
+                dadjokes = []
+                for i in range(config.count):
+                    joke_json = requests.get(headers='content-type': 'application/json', url=config.url)
+                    dadjokes.append(joke_json)
 
-    while 1:
-        try:
-            cleanup()
-            # get number of dad jokes 
-            dadjokes = []
-            for i in range(config.count):
-                joke_json = requests.get(headers='content-type': 'application/json', url=config.url)
-                dadjokes.append(joke_json)
-
-            # write to file
-            node.write_json("dadjokes.json", dadjokes)
-        except:
-            traceback.print_exc()
-            time.sleep(60)
-        else:
-            time.sleep(60 * config.poll_interval)
+                # write to file
+                node.write_json("dadjokes.json", dadjokes)
+            except:
+                traceback.print_exc(file=log)
+                time.sleep(60)
+            else:
+                time.sleep(60 * config.poll_interval)
 
 if __name__ == '__main__':
     main()
