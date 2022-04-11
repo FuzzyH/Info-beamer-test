@@ -4,8 +4,8 @@ local font = resource.load_font("UniversforUniS55Rm-Regular.ttf")
 local json = require "json"
 
 local jokes 
-util.file_watch("dadjokes.json", function (content)
-    jokes = json.decode(content)
+util.json_watch("dadjokes.json", function (joke)
+    jokes = json.decode(joke)
 end)
 
 function node.render()
