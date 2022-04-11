@@ -10,7 +10,7 @@
     {
         "title": "Url",
         "ui_width": 3,
-        "name": "Dad joke site",
+        "name": "url",
         "type": "string",
         "placeholder":"https://icanhazdadjoke.com/",
         "default": "https://icanhazdadjoke.com/"
@@ -40,7 +40,6 @@
         ],
         "default": 5
     }
-
     ]
     
 
