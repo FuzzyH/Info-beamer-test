@@ -2,6 +2,7 @@
 import os
 import time
 import traceback
+from unicodedata import name
 import requests
 from hosted import config, node
 
@@ -21,7 +22,7 @@ def cleanup(max_age=12*3600):
 
 def main():
     config.restart_on_update()
-    with open(file='logg.log', mode='a') as log:
+    with open(name='logg.log', mode='a') as log:
         log.write("opened\n")
         while 1:
             log.write("while\n")
@@ -48,6 +49,6 @@ def main():
             else:
                 time.sleep(60 * config.poll_interval)
         log.close()
-        
+
 if __name__ == '__main__':
     main()
