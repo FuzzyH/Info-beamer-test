@@ -1,7 +1,7 @@
-gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
+gl.setup(1024, 768)
 
-local font = resource.load_font "font.ttf"
+local font = resource.load_font("silkscreen.ttf")
 
 function node.render()
-    font:write(250, 300, "Hello world", 64, 1,1,1,1)
+    font:write(120, 320, "Hello World", 100, 1,1,1,1)
 end
