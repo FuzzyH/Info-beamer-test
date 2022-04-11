@@ -17,7 +17,7 @@ def cleanup(max_age=12*3600):
             try:
                 os.unlink(filename)
             except:
-                traceback.print_exc()
+                traceback.print_exc(file=log)
 
 def main():
     config.restart_on_update()
@@ -34,7 +34,7 @@ def main():
             # write to file
             node.write_json("dadjokes.json", dadjokes)
         except:
-            traceback.print_exc()
+            traceback.print_exc(file=log)
             time.sleep(60)
         else:
             time.sleep(60 * config.poll_interval)
