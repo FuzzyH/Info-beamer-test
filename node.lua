@@ -12,8 +12,8 @@ util.json_watch("dadjokes.json", function (dadjokes)
 end)
 
 function node.render()
-    log("Renderer", "jokes jokes jokes")
-    log("Renderer", "jokes: "..jokes[0].."")
-    font:write(120, 320, ""..jokes["joke"].."", 100, 1,1,1,1)
+
+    log("Renderer", "jokes: "..jokes[0]['joke'].."")
+    font:write(120, 320, ""..jokes[0]["joke"].."", 100, 1,1,1,1)
 end
 
