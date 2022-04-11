@@ -47,6 +47,7 @@ def main():
                 time.sleep(60)
             else:
                 time.sleep(60 * config.poll_interval)
-
+        log.close()
+        
 if __name__ == '__main__':
     main()
