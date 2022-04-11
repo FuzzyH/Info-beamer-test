@@ -31,12 +31,12 @@ def main():
             dadjokes = []
             for i in range(config.count):
                 joke_json = requests.get(headers={'Accept': 'application/json'}, url='https://icanhazdadjoke.com/').json()
-                print >>sys.stderr, 'caching %s' % joke_json
+                
                 husk = dict(
                     joke = joke_json['joke']
                 )
                 dadjokes.append(husk)
-                
+            print >>sys.stderr, 'caching %s' % dadjokes
             # write to file
             node.write_json("dadjokes.json", dadjokes)
         except:
