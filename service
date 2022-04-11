@@ -22,17 +22,25 @@ def cleanup(max_age=12*3600):
 def main():
     config.restart_on_update()
     with open(log.log) as log:
+        log.write("opened")
         while 1:
+            log.write("while")
             try:
+                log.write("try")
                 cleanup()
+                log.write("cleaned")
                 # get number of dad jokes 
                 dadjokes = []
+
                 for i in range(config.count):
                     joke_json = requests.get(headers={'content-type': 'application/json'}, url='https://icanhazdadjoke.com/')
                     dadjokes.append(joke_json)
+                    log.write("load joke number: "+i)
 
+                log.write("write to json")
                 # write to file
                 node.write_json("dadjokes.json", dadjokes)
+                log.write("saved")
             except:
                 traceback.print_exc(file=log)
                 time.sleep(60)
