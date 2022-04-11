@@ -33,7 +33,7 @@ def main():
                 joke_json = requests.get(headers={'Accept': 'application/json'}, url='https://icanhazdadjoke.com/').json()
                 
                 husk = {
-                    'joke'+i: joke_json['joke']
+                    'joke': joke_json['joke']
                 }
                 dadjokes.append(husk)
             print >>sys.stderr, 'caching %s' % dadjokes
