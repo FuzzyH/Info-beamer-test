@@ -1,13 +1,47 @@
 {
-    "name": "Hello World Node",
-    "options": [{
-        "title": "Hello World",
-        "name": "text",
-        "type": "string",
-        "default": "Hello world!"
-    }],
-    "desc": "Hello World test",
+    "name": "Dad Joke test",
     "permissions": {
         "network": "Needed to fetch Dad Jokes"
+    },
+    "options": [{
+        "title": "Dad joke",
+        "type": "section"
+    },
+    {
+        "title": "Url",
+        "ui_width": 3,
+        "name": "Dad joke site",
+        "type": "string",
+        "placeholder":"https://icanhazdadjoke.com/",
+        "default": "https://icanhazdadjoke.com/"
+    },
+    {
+        "title": "Number of jokes per poll",
+        "ui_width": 3,
+        "name": "count",
+        "type": "select",
+        "options": [
+            [10, "10 jokes"],
+            [20, "20 jokes"],
+            [40, "40 jokes"],
+            [80, "80 jokes"]
+        ],
+        "default": 20
+    },
+    {
+        "title": "Poll interval",
+        "ui_width": 3,
+        "name": "poll_interval",
+        "type": "select",
+        "options": [
+            [2, "2 Minutes"],
+            [5, "5 Minutes"],
+            [10, "10 Minutes"]
+        ],
+        "default": 5
     }
+
+    ]
+    
+
 }
