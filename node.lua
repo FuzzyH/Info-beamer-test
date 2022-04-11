@@ -9,7 +9,6 @@ util.json_watch("dadjokes.json", function (joke)
 end)
 
 function node.render()
-
-    font:write(120, 320, jokes, 100, 1,1,1,1)
+    font:write(120, 320, jokes[0], 100, 1,1,1,1)
 end
 
