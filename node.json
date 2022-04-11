@@ -1,10 +1,10 @@
 {
     "name": "Hello World Node",
     "options": [{
-        "title": "Text",
+        "title": "Hello World",
         "name": "text",
         "type": "string",
-        "default": "Hello world"
+        "default": "Hello world!"
     }],
     "desc": "Hello World test",
     "permissions": {
