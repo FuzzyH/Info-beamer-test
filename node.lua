@@ -2,7 +2,7 @@
 gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 
 -- include libarys
-local api
+local api = ...
 local json = require "json"
 
 -- include other files
