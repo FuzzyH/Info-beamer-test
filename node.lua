@@ -14,7 +14,7 @@ end
 
 function node.render()
     if jokes[0] ~= nil then
-        j0 = jokes[0]
+        j0 = jokes[0]["joke"]
     else
         log("Renderer", "Table nil")
     end
