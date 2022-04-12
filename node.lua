@@ -33,6 +33,7 @@ function node.render()
         local font_size = 100
         local lines = utility.wrap(jokes["joke"], font, font_size, canvas_width)
         for line in lines do
+            log("Renderer", "lines: " ..line)
             font:write(border, border, line, font_size, 1,1,1,1)
         end
     else
