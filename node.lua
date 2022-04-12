@@ -16,10 +16,10 @@ function node.render()
     if jokes[0] ~= nil then
         j0 = jokes[0]
     else
-        log("Renderer", "Table nil")
+        --log("Renderer", "Table nil")
     end
-    log("Renderer", "Rendering")
-    log("Renderer", "jokes: " ..j0.."")
+   -- log("Renderer", "Rendering")
+   -- log("Renderer", "jokes: " ..j0.."")
     font:write(120, 320, "Test", 100, 1,1,1,1)
 end
 
