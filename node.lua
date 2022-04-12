@@ -28,7 +28,8 @@ end
 function node.render()
     --gl.clear(1,1,1,1)
     if jokes["joke"] ~= nil then
-        font:write(100, 200, "" ..jokes["joke"].."", 50, 1,1,1,1)
+        local tmp = jokes["joke"]
+        font:write(100, 200, "" ..tmp.."", 50, 1,1,1,1)
     else
         log("Renderer", "Table nil")
     end
