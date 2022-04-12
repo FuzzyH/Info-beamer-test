@@ -1,3 +1,4 @@
+local utf8 = require "utf8"
 
 local function wrap(str, font, size, max_w)
     local lines = {}

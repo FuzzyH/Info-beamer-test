@@ -2,6 +2,7 @@ gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 
 -- include libarys
 local json = require "json"
+local utf8 = require "utf8"
 
 -- include other files
 --local utility = require "utility"
