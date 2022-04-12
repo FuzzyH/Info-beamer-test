@@ -1,26 +1,36 @@
+-- setup
 gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 
-local font = resource.load_font("UniversforUniS55Rm-Regular.ttf")
+-- include libarys
+local api
 local json = require "json"
-local j0
+
+-- include other files
+local utility = require(api.localized "utility")
+local font = resource.load_font("UniversforUniS55Rm-Regular.ttf")
+
+-- variables:
 local jokes
+
+-- Watchers
 util.file_watch("dadjokes.json", function (dadjokes)
     jokes = json.decode(dadjokes)
 end)
 
+-- Logging
 local function log(system, format, ...)
     return print(string.format("[%s] " .. format, system, ...))
 end
 
+-- other functions
+
+-- rendering
 function node.render()
     --gl.clear(1,1,1,1)
-    if jokes["0"] ~= nil then
-        j0 = jokes["0"]["joke"]
+    if jokes["joke"] ~= nil then
+        font:write(100, 200, "" ..jokes["joke"].."", 50, 1,1,1,1)
     else
         log("Renderer", "Table nil")
     end
-   --log("Renderer", "Rendering")
-   --log("Renderer", "jokes: " ..j0.."")
-    font:write(120, 320, "" ..j0.."", 50, 1,1,1,1)
 end
 
