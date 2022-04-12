@@ -5,7 +5,7 @@ local json = require "json"
 
 local jokes
 util.file_watch("dadjokes.json", function (dadjokes)
-    jokes = dadjokes
+    jokes = json.decode(dadjokes)
 end)
 
 local function log(system, format, ...)
