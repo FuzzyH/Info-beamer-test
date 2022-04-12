@@ -1,7 +1,7 @@
 gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 
 local font = resource.load_font("UniversforUniS55Rm-Regular.ttf")
-local json = require(json)
+local json = require "json"
 
 local jokes
 util.file_watch("dadjokes.json", function (dadjokes)
