@@ -7,9 +7,9 @@ local function log(system, format, ...)
     return print(string.format("[%s] " .. format, system, ...))
 end
 
-local jokes 
+local jokes
 util.file_watch("dadjokes.json", function (dadjokes)
-    jokes = json.decode(dadjokes)
+    jokes = dadjokes
 end)
 
 function node.render()
