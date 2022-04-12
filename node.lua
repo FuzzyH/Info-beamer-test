@@ -76,9 +76,10 @@ function node.render()
         local font_size = 100
         log("Renderer", "before wrapper")
         local lines = wrap(jokes["joke"], font, font_size, canvas_width)
-        for key, value in pairs(lines) do
-            log("Renderer", "lines: " ..value)
-            font:write(border, border, value, font_size, 1,1,1,1)
+        for idx = 1, #lines do
+            local line = lines[idx]
+            log("Renderer", "lines: " ..line)
+            font:write(border, border+idx*font_size+5, line, font_size, 1,1,1,1)
         end
     else
         log("Renderer", "Table is nil")
