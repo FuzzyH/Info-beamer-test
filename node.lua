@@ -7,12 +7,11 @@ local function log(system, format, ...)
 end
 
 local jokes 
-util.json_watch("dadjokes.json", function (dadjokes)
+util.file_watch("dadjokes.json", function (dadjokes)
     jokes = dadjokes
 end)
 
 function node.render()
-
 
     log("Renderer", "jokes: "..jokes.."")
     font:write(120, 320, ""..jokes[0]["joke"].."", 100, 1,1,1,1)
