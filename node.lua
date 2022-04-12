@@ -30,6 +30,7 @@ end
 function node.render()
     if jokes["joke"] ~= nil then
         local font_size = 100
+        log("Renderer", "before wrapper")
         local lines = utility.wrap(jokes["joke"], font, font_size, canvas_width)
         for line in lines do
             log("Renderer", "lines: " ..line)
