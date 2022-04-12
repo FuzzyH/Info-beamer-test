@@ -1,11 +1,10 @@
--- setup
 gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
 
 -- include libarys
 local json = require "json"
 
 -- include other files
-local utility = require "/space/root/utility.lua"
+local utility = require "/space/root/utility"
 local font = resource.load_font("UniversforUniS55Rm-Regular.ttf")
 
 -- variables:
