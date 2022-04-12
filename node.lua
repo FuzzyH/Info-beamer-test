@@ -6,7 +6,7 @@ local api
 local json = require "json"
 
 -- include other files
-local utility = require(api.localized "utility")
+--local utility = require(api.localized "utility")
 local font = resource.load_font("UniversforUniS55Rm-Regular.ttf")
 
 -- variables:
