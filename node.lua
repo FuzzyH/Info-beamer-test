@@ -74,11 +74,11 @@ end
 function node.render()
     if jokes["joke"] ~= nil then
         local font_size = 100
-        log("Renderer", "before wrapper")
+        -- log("Renderer", "before wrapper")
         local lines = wrap(jokes["joke"], font, font_size, canvas_width)
         for idx = 1, #lines do
             local line = lines[idx]
-            log("Renderer", "lines: " ..line)
+            -- log("Renderer", "lines: " ..line)
             font:write(border, border+idx*font_size+5, line, font_size, 1,1,1,1)
         end
     else
