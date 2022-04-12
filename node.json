@@ -23,7 +23,7 @@
         "title": "Font Size",
         "ui_width": 3,
         "name": "font_size",
-        "type": "",
+        "type": "string",
         "default": 100
     }
     ]
