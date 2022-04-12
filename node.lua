@@ -16,6 +16,6 @@ function node.render()
 
     log("Renderer", "Rendering")
     log("Renderer", "jokes: " ..jokes.."")
-    font:write(120, 320, ""..jokes["0"]["joke"].."", 100, 1,1,1,1)
+    --font:write(120, 320, ""..jokes["0"]["joke"].."", 100, 1,1,1,1)
 end
 
