@@ -6,11 +6,14 @@ local api
 local json = require "json"
 
 -- include other files
---local utility = require(api.localized "utility")
+local utility = require(api.localized "utility")
 local font = resource.load_font("UniversforUniS55Rm-Regular.ttf")
 
 -- variables:
 local jokes
+local border = math.floor(NATIVE_HEIGHT * 0.05)
+local canvas_width = NATIVE_WIDTH - border
+local canvas_height = NATIVE_HEIGHT - border
 
 -- Watchers
 util.file_watch("dadjokes.json", function (dadjokes)
@@ -26,13 +29,14 @@ end
 
 -- rendering
 function node.render()
-    --gl.clear(1,1,1,1)
     if jokes["joke"] ~= nil then
-        --local tmp = jokes["joke"]
-        --log("Renderer", "tmp: "..tmp)
-        font:write(100, 200, jokes["joke"], 50, 1,1,1,1)
+        local font_size = 100
+        local lines = utility.wrap(jokes["joke"], font, font_size, canvas_width)
+        for line in lines do
+            font:write(border, border, line, font_size, 1,1,1,1)
+        end
     else
-        log("Renderer", "Table nil")
+        log("Renderer", "Table is nil")
     end
 end
 

@@ -1,5 +1,3 @@
-local font
-local font_size
 
 
 local function wrap(str, font, size, max_w)
