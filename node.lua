@@ -13,9 +13,14 @@ local function log(system, format, ...)
 end
 
 function node.render()
+    j0 = ""
+    if jokes[0] ~= nil then
+        j0 = jokes[0]
+    else
+        log("Renderer", "Table nil")
 
     log("Renderer", "Rendering")
-    log("Renderer", "jokes: " ..jokes[0]["joke"].."")
+    log("Renderer", "jokes: " ..j0.."")
     font:write(120, 320, "Test", 100, 1,1,1,1)
 end
 
