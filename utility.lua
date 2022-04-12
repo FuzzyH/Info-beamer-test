@@ -1,5 +1,4 @@
 
-
 local function wrap(str, font, size, max_w)
     local lines = {}
     local space_w = font:width(" ", size)
