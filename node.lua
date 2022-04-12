@@ -18,8 +18,8 @@ function node.render()
     else
         log("Renderer", "Table nil")
     end
-   -- log("Renderer", "Rendering")
-    log("Renderer", "jokes: " ..j0.."")
-    font:write(120, 320, "Test", 100, 1,1,1,1)
+   --log("Renderer", "Rendering")
+   --log("Renderer", "jokes: " ..j0.."")
+    font:write(120, 320, "joke: " ..j0.."", 100, 1,1,1,1)
 end
 
