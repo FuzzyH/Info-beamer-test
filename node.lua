@@ -9,7 +9,7 @@ end
 
 local jokes
 util.file_watch("dadjokes.json", function (dadjokes)
-    jokes = pp(json.decode(dadjokes))
+    jokes = json.decode(dadjokes)
 end)
 
 function node.render()
