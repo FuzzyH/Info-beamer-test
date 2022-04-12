@@ -13,6 +13,7 @@ local function log(system, format, ...)
 end
 
 function node.render()
+    gl.clear(1,1,1,1)
     if jokes["0"] ~= nil then
         j0 = jokes["0"]["joke"]
     else
@@ -20,6 +21,6 @@ function node.render()
     end
    --log("Renderer", "Rendering")
    --log("Renderer", "jokes: " ..j0.."")
-    font:write(120, 320, "joke: " ..j0.."", 100, 1,1,1,1)
+    font:write(120, 320, "joke: " ..j0.."", 10, 1,1,1,1)
 end
 
