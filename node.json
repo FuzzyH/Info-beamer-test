@@ -8,26 +8,13 @@
         "type": "section"
     },
     {
-        "title": "Number of jokes per poll",
-        "ui_width": 3,
-        "name": "count",
-        "type": "select",
-        "options": [
-            [10, "10 jokes"],
-            [20, "20 jokes"],
-            [40, "40 jokes"],
-            [80, "80 jokes"]
-        ],
-        "default": 20
-    },
-    {
         "title": "Poll interval",
         "ui_width": 3,
         "name": "poll_interval",
         "type": "select",
         "options": [
             [2, "2 Minutes"],
-            [5, "5 Minutes"],
+            [5, "5 Minutes (default)"],
             [10, "10 Minutes"]
         ],
         "default": 5

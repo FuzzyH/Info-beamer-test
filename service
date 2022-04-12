@@ -27,15 +27,11 @@ def main():
         try:
             # clean older files
             cleanup()
-            # get number of dad jokes 
             dadjokes = {}
-            for i in range(config.count):
-                joke_json = requests.get(headers={'Accept': 'application/json'}, url='https://icanhazdadjoke.com/').json()
-                
-                husk = {
-                    'joke': joke_json['joke']
-                }
-                dadjokes[i] = husk
+            joke_json = requests.get(headers={'Accept': 'application/json'}, url='https://icanhazdadjoke.com/').json()
+            dadjokes = {
+                'joke': joke_json['joke']
+            }
             print >>sys.stderr, 'caching %s' % dadjokes
             # write to file
             node.write_json("dadjokes.json", dadjokes)
