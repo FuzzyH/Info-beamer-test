@@ -3,7 +3,7 @@ local api, CHILDS, CONTENTS = ...
 
 local anims = require(api.localized "anims")
 local utf8 = require "utf8"
-local font
+local font = resource.load_font("UniversforUniS55Rm-Regular.ttf")
 local font_size = 100
 local margin = 10
 
