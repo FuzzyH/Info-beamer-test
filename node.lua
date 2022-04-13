@@ -86,7 +86,7 @@ function draw_dadjoke(x1, y1, width, height)
         for idx = 1, #lines do
             local line = lines[idx]
             log("Renderer", "lines: " ..line)
-            font:write(x1, y1+idx*font_size+border, line, font_size, font_color)
+            font:write(x1, y1+idx*font_size+border, line, font_size, font_color[0], font_color[1], font_color[2], font_color[3])
         end
     else
         log("node.lua", "Table is nil")
