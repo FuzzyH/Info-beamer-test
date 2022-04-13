@@ -40,6 +40,7 @@ function draw_dadjoke(x1, y1, width, height)
             local line = lines[idx]
             -- log("Renderer", "lines: " ..line)
             font:write(x1, y1+idx*font_size+margin, line, font_size, font_color)
+            font:write(300,300,"hw",1,1,1,1)
         end
     else
         log("Renderer", "Table is nil")
