@@ -3,7 +3,7 @@ local api, CHILDS, CONTENTS = ...
 
 local anims = require(api.localized "anims")
 local utf8 = require "utf8"
-local font = resource.load_font("UniversforUniS55Rm-Regular.ttf")
+local font = resource.load_font("default-font.ttf")
 local font_size = 100
 local margin = 10
 
@@ -34,6 +34,25 @@ function draw_dadjoke(x1, y1, width, height)
         log("Renderer", "Table is nil")
     end
 end
+
+function M.updated_config_json(config)
+    print "config updated"
+
+    include_in_scroller = config.include_in_scroller
+    font = resource.load_font(api.localized(config.font.asset_name))
+    font_size = config.font_size
+    margin = config.margin
+    
+
+    if config.shading > 0.0 then
+        shading = resource.create_colored_texture(0,0,0,config.shading)
+    else
+        shading = nil
+    end
+
+    node.gc()
+end
+
 
 function M.task(starts, ends, config, x1, y1, x2, y2)
     for now in api.frame_between(starts, ends) do
