@@ -12,11 +12,12 @@ local jokes
 local border = math.floor(NATIVE_HEIGHT * 0.05)
 local canvas_width = NATIVE_WIDTH - border
 local canvas_height = NATIVE_HEIGHT - border
+local config
 
 -- font
 local font = resource.load_font("default-font.ttf")
-local font_size = config.font_size
-local r, g, b = parse_rgb(config.color or "#ffffff")
+local font_size = 100
+local r, g, b = 1, 1, 1
 
 -- Watchers
 util.file_watch("dadjokes.json", function (dadjokes)
@@ -29,9 +30,12 @@ local function log(system, format, ...)
 end
 
 -- updated config by event
-node.event("config_updated", function(config)
-    font_size = config.font_size
-    r,g,b = parse_rgb(config.color or "#ffffff")
+node.event("content_update", function(filename, file)
+    if filename == "config.json" then
+        config = json.decode(resource.load_file(file))
+        font_size = config.font_size
+        r,g,b = parse_rgb(config.color or "#ffffff")
+    end
 end)
 
 -- other functions
