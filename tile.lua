@@ -6,7 +6,7 @@ local utf8 = require "utf8"
 local font = resource.load_font("default-font.ttf")
 local font_size = 100
 local margin = 10
-
+local font_color
 local jokes
 
 M = {}
@@ -28,7 +28,7 @@ function draw_dadjoke(x1, y1, width, height)
         for idx = 1, #lines do
             local line = lines[idx]
             -- log("Renderer", "lines: " ..line)
-            font:write(x1, y1+idx*font_size+margin, line, font_size, x1,y1,x1+width, y1+height)
+            font:write(x1, y1+idx*font_size+margin, line, font_size, font_color)
         end
     else
         log("Renderer", "Table is nil")
@@ -41,16 +41,8 @@ function M.updated_config_json(config)
     include_in_scroller = config.include_in_scroller
     font = resource.load_font(api.localized(config.font.asset_name))
     font_size = config.font_size
-    margin = config.margin
-    
+    font_color = config.color
 
-    if config.shading > 0.0 then
-        shading = resource.create_colored_texture(0,0,0,config.shading)
-    else
-        shading = nil
-    end
-
-    node.gc()
 end
 
 
