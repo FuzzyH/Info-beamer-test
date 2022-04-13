@@ -13,7 +13,7 @@ local canvas_width = NATIVE_WIDTH - border
 local canvas_height = NATIVE_HEIGHT - border
 
 -- font
-local font = resource.load_font("default-font.ttf")
+local font = resource.load_font("Savor.ttf")
 local font_size = 100
 local font_color = {1, 1, 1, 1}
 
@@ -38,9 +38,10 @@ function draw_dadjoke(x1, y1, width, height)
     if jokes["joke"] ~= nil then
         log("node.lua", "before wraper")
         local lines = utility.wrap(jokes["joke"], font, font_size, width)
+        log("node.lua", "after wraper")
         for idx = 1, #lines do
             local line = lines[idx]
-            -- log("Renderer", "lines: " ..line)
+            log("Renderer", "lines: " ..line)
             font:write(x1, y1+idx*font_size+border, line, font_size, font_color)
         end
     else
