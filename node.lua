@@ -16,7 +16,7 @@ local canvas_height = NATIVE_HEIGHT - border
 -- font
 local font = resource.load_font("default-font.ttf")
 local font_size = 100
-local r,g,b = 1
+local r,g,b = 1,1,1
 
 -- Watchers
 util.file_watch("dadjokes.json", function (dadjokes)
@@ -46,7 +46,7 @@ function draw_dadjoke(x1, y1, width, height)
         local lines = utility.wrap(jokes["joke"], font, font_size, width)
         for idx = 1, #lines do
             local line = lines[idx]
-            --log("Renderer", "lines: " ..line)
+            log("Renderer", "lines: " ..line)
             font:write(x1, y1+idx*font_size+border, line, font_size, r, g, b, 1)
         end
     else
