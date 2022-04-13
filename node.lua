@@ -31,7 +31,7 @@ end
 -- updated config by event
 node.event("config_updated", function(config)
     font_size = config.font_size
-   -- r,g,b = parse_rgb(config.color or "#ffffff")
+    r,g,b = parse_rgb(config.color or "#ffffff")
 end)
 
 -- other functions
