@@ -16,6 +16,7 @@ util.file_watch("dadjokes.json", function (dadjokes)
     jokes = json.decode(dadjokes)
 end)
 
+
 -- Logging
 local function log(system, format, ...)
     return print(string.format("[%s] " .. format, system, ...))
