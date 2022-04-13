@@ -15,8 +15,8 @@ local canvas_height = NATIVE_HEIGHT - border
 
 -- font
 local font = resource.load_font("default-font.ttf")
-local font_size = 100
-local r, g, b = 1, 1, 1
+local font_size = config.font_size
+local r, g, b = parse_rgb(config.color or "#ffffff")
 
 -- Watchers
 util.file_watch("dadjokes.json", function (dadjokes)
@@ -35,8 +35,6 @@ node.event("config_updated", function(config)
 end)
 
 -- other functions
-
-
 function wrap(str, font, size, max_w)
     local lines = {}
     local space_w = font:width(" ", size)
