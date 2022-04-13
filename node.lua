@@ -91,7 +91,7 @@ function draw_dadjoke(x1, y1, width, height)
         local lines = wrap(jokes["joke"], font, font_size, width)
         for idx = 1, #lines do
             local line = lines[idx]
-            log("Renderer", "lines: " ..line)
+            -- log("Renderer", "lines: " ..line)
             font:write(x1, y1+idx*font_size+border, line, font_size, r, g, b, 1)
         end
     else
