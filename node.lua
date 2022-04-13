@@ -14,9 +14,9 @@ local canvas_width = NATIVE_WIDTH - border
 local canvas_height = NATIVE_HEIGHT - border
 
 -- font
-local font = resource.load_font("Savor.ttf")
+local font = resource.load_font("default-font.ttf")
 local font_size = 100
-local r,g,b = 1,1,1
+local r, g, b = 1, 1, 1
 
 -- Watchers
 util.file_watch("dadjokes.json", function (dadjokes)
