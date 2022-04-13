@@ -5,7 +5,7 @@ local json = require "json"
 
 -- include other files
 local utility = require "utility"
-local font = resource.load_font("UniversforUniS55Rm-Regular.ttf")
+local font = resource.load_font("default-font.ttf")
 
 -- variables:
 local jokes
@@ -29,7 +29,7 @@ end
 -- rendering
 function node.render()
     if jokes["joke"] ~= nil then
-        local font_size = 100
+        local font_size = config.font_size
         -- log("Renderer", "before wrapper")
         local lines = utility.wrap(jokes["joke"], font, font_size, canvas_width)
         for idx = 1, #lines do

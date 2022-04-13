@@ -26,8 +26,20 @@
         "title": "Font Size",
         "ui_width": 3,
         "name": "font_size",
-        "type": "string",
-        "default": "100"
+        "type": "select",
+        "options": [
+            [40, "40px"],
+            [50, "50px"],
+            [60, "60px"],
+            [70, "70px"],
+            [80, "80px"],
+            [90, "90px (default)"],
+            [100, "100px"],
+            [120, "120px"],
+            [140, "140px"],
+            [160, "160px"],
+        ],
+        "default": 100
     }
     
     ]
