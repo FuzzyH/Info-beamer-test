@@ -1,5 +1,5 @@
 gl.setup(NATIVE_WIDTH, NATIVE_HEIGHT)
-util.init_hosted()
+
 
 -- include libarys
 local json = require "json"
@@ -13,16 +13,23 @@ local jokes
 local border = math.floor(NATIVE_HEIGHT * 0.05)
 local canvas_width = NATIVE_WIDTH - border
 local canvas_height = NATIVE_HEIGHT - border
-
+local config
 
 -- font
 local font = resource.load_font("default-font.ttf")
-local font_size = CONFIG.font_size
+local font_size = 100
 local r, g, b = 1, 1, 1
 
 -- Watchers
 util.file_watch("dadjokes.json", function (dadjokes)
     jokes = json.decode(dadjokes)
+end)
+
+
+util.file_watch("config.json", function(content)
+    config = json.decode(content)
+    font_size = config.font_size
+    r, g, b = parse_rgb(config.font_color or "#ffffff")
 end)
 
 -- Logging
