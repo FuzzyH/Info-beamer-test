@@ -39,6 +39,7 @@ function draw_dadjoke(x1, y1, width, height)
     if jokes["joke"] ~= nil then
         -- log("Renderer", "before wrapper")
         log("node.lua", "before wraper")
+        log("node.lua", "variables: "..font_size.."")
         log("node.lua", "variables: ".. font..", "..font_size.."")
         local lines = utility.wrap(jokes["joke"], font, font_size, width)
         for idx = 1, #lines do
