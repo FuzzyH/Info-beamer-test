@@ -1,14 +1,14 @@
 {
-    "name": "Hello world",
+    "name": "Dad Jokes",
     "author": "Ulf Kunze",
-    "desc": "Hello World test",
+    "desc": "Sometimes you need a crowed breaker, or just something stupid",
     "repository": "https://github.com/FuzzyH/Info-beamer-test",
     "version": "0.1",
     "platforms": ["pi/epoch-1", "pi/epoch-2"],
     "lifecycle": "production",
     "offline": {
         "support": "no",
-        "info": "it's a hello world"
+        "info": "It needs to connect with the API of https://icanhazdadjoke.com/"
     },
     "nesting": {
         "parents": "any",
