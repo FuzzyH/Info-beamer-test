@@ -82,10 +82,7 @@ end
 
 function draw_dadjoke(x1, y1, width, height)
     if jokes["joke"] ~= nil then
-        log("node.lua", "before wraper")
-        log("node.lua", "joke: "..jokes["joke"])
         local lines = wrap(jokes["joke"], font, font_size, width)
-        log("node.lua", "after wraper")
         for idx = 1, #lines do
             local line = lines[idx]
             log("Renderer", "lines: " ..line)
