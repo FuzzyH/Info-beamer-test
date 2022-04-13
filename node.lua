@@ -85,8 +85,8 @@ function draw_dadjoke(x1, y1, width, height)
         local lines = wrap(jokes["joke"], font, font_size, width)
         for idx = 1, #lines do
             local line = lines[idx]
-            log("Renderer", "lines: " ..line)
-            font:write(x1, y1+idx*font_size+border, line, font_size, font_color[0], font_color[1], font_color[2], font_color[3])
+            --log("Renderer", "lines: " ..line)
+            font:write(x1, y1+idx*font_size+border, line, font_size, 1, 1, 1, 1)
         end
     else
         log("node.lua", "Table is nil")
