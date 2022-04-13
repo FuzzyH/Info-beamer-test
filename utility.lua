@@ -5,7 +5,7 @@ function parse_rgb(hex)
     return tonumber("0x"..hex:sub(1,2))/255, tonumber("0x"..hex:sub(3,4))/255, tonumber("0x"..hex:sub(5,6))/255
 end
 
-local function wrap(str, font, size, max_w)
+function wrap(str, font, size, max_w)
     local lines = {}
     local space_w = font:width(" ", size)
 
