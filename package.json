@@ -11,7 +11,7 @@
         "info": "It needs to connect with the API of https://icanhazdadjoke.com/"
     },
     "nesting": {
-        "parents": "any",
+        "parents": ["scheduled-plugin"],
         "childs": []
     }
 }
