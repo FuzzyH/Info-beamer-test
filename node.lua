@@ -26,11 +26,11 @@ util.file_watch("dadjokes.json", function (dadjokes)
 end)
 
 
-util.file_watch("config.json", function(content)
-    config = json.decode(content)
-    font_size = 100 --config.font_size
-    r, g, b = 1, 1, 1-- parse_rgb(config.font_color or "#ffffff")
-end)
+--util.file_watch("config.json", function(content)
+--    config = json.decode(content)
+--    font_size = 100 --config.font_size
+--    r, g, b = 1, 1, 1-- parse_rgb(config.font_color or "#ffffff")
+--end)
 
 -- Logging
 local function log(system, format, ...)
