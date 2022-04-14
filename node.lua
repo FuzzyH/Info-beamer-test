@@ -29,7 +29,7 @@ end)
 util.file_watch("config.json", function(content)
     config = json.decode(content)
     font_size = config.font_size
-    r, g, b = parse_rgb(config.font_color or "#ffffff")
+    r, g, b = 1, 1, 1-- parse_rgb(config.font_color or "#ffffff")
 end)
 
 -- Logging
