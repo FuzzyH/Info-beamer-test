@@ -1,7 +1,6 @@
 local api, CHILDS, CONTENTS = ...
 
 -- imports
-local utility = require(api.localized "utility")
 local anims = require(api.localized "anims")
 
 local json require "json"
