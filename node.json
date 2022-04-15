@@ -23,6 +23,14 @@
         "default": 5
     },
     {
+        "title": "Font",
+        "ui_width": 3,
+        "name": "font",
+        "type": "font",
+        "doc_link": true,
+        "default": "default-font.ttf"
+    },
+    {
         "title": "Font Size",
         "ui_width": 3,
         "name": "font_size",
