@@ -79,7 +79,7 @@ function draw_dadjoke(x1, y1, width, height)
         for idx = 1, #lines do
             local line = lines[idx]
             -- log("Renderer", "lines: " ..line)
-            font:write(x1, y1+idx*font_size+margin, line, font_size, 1,1,1,1)
+            font:write(x1, y1+idx*font_size+margin, line, font_size, r, g, b, 1)
         end
     else
         log("Renderer", "Table is nil")
@@ -89,8 +89,9 @@ end
 function M.updated_config_json(config)
     print "config updated"
     --font = resource.load_font(api.localized(config.font.asset_name))
-    --font_size = config.font_size
-   -- font_color = config.color
+    font = resource.load_font("default-font.ttf")
+    font_size = config.font_size
+    r,g,b = parse_rgb(config.color)
 
 end
 
